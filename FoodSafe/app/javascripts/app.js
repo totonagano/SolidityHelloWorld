@@ -20,6 +20,7 @@ window.App = {
 
       accounts = accs;
       account = accounts[0];
+      web3.eth.defaultAccount = account;
     });
   },
 };
