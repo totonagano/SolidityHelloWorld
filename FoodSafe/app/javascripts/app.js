@@ -32,6 +32,13 @@ window.App = {
       })
     });
   },
+  createContract: function() {
+    foodSafeContract.new("", {from: account, data: foodSafeCode, gas: 3000000, function(error, deployedContract) {
+      if(deployedContract.address) {
+        document.getElementById("contractAddress").value = deplotedContract.address;
+      }
+    }})
+  }
 };
 
 window.addEventListener('load', function() {
